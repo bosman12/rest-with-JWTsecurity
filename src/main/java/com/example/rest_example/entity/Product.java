@@ -1,14 +1,10 @@
 package com.example.rest_example.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-
-
 import javax.persistence.*;
 
 @Entity
 @Data
-@Table(name = "product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

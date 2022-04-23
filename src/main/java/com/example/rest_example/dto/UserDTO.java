@@ -1,14 +1,11 @@
-package com.example.rest_example.transferDTO;
+package com.example.rest_example.dto;
 
-import com.example.rest_example.entity.Phone;
-import com.example.rest_example.entity.Product;
 import com.example.rest_example.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -18,12 +15,14 @@ import java.util.stream.Collectors;
 @Builder
 public class UserDTO {
     private Long id;
-    private String name;
+    private String userName;
+    private String firstName;
     private String lastName;
     public static UserDTO from(User user) {
         return UserDTO.builder()
                 .id(user.getId())
-                .name(user.getName())
+                .userName(user.getUserName())
+                .firstName(user.getFirstName())
                 .lastName(user.getLastName())
                 .build();
     }

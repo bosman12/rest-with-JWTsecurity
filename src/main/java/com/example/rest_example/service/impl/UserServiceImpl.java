@@ -46,7 +46,10 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(id);
     }
 
-
-
+    public User findByUsername(String username){
+        User result = userRepository.findByUserName(username);
+        log.info("found a user: {}",result);
+        return result;
+    }
 
 }
